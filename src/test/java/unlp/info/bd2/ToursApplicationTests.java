@@ -11,17 +11,20 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.transaction.annotation.Transactional;
 import unlp.info.bd2.config.AppConfig;
-import unlp.info.bd2.config.HibernateConfiguration;
+import unlp.info.bd2.config.SpringDataConfiguration;
+import unlp.info.bd2.model.*;
 import unlp.info.bd2.services.ToursService;
 import unlp.info.bd2.utils.ToursException;
-import unlp.info.bd2.model.*;
+
+import javax.swing.text.html.Option;
+import java.time.LocalDate;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
 @SpringBootTest
-@ContextConfiguration(classes = {HibernateConfiguration.class, AppConfig.class}, loader = AnnotationConfigContextLoader.class)
+@ContextConfiguration(classes = {SpringDataConfiguration.class, AppConfig.class}, loader = AnnotationConfigContextLoader.class)
 @ExtendWith(SpringExtension.class)
 @Transactional
 @Rollback(true)
@@ -76,6 +79,8 @@ class ToursApplicationTests {
 		DriverUser driverUser = (DriverUser) opUserFromDB2.get();
 		assertEquals(driverUser.getId(), driverUser1.getId());
 		assertEquals(driverUser.getExpedient(), "exp...");
+
+		System.out.println("Esto es una nueva linea");
 
 		assertThrows(ToursException.class, () -> this.toursService.createUser("userD", "1234", "Otro usuario", "otromail@gmail.com", dob1, "000111222999"), "Constraint Violation");
 	}
