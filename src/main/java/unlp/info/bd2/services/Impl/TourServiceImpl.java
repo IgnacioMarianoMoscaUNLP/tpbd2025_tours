@@ -84,7 +84,7 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public List<Stop> getStopByNameStart(String name) {
-        return List.of();
+        return this.stopRepository.findByNameStartingWith(name);
     }
 
     @Override
@@ -100,7 +100,7 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public List<Route> getRoutesBelowPrice(float price) {
-        return List.of();
+        return this.routeRepository.findByPriceLessThan(price);
     }
 
     @Override
