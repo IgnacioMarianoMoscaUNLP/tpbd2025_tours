@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableJpaRepositories(basePackages = "unlp.info.bd2.repositories")
+@EnableJpaRepositories(basePackages = "unlp.info.bd2.repository")
 @EnableTransactionManagement
 public class SpringDataConfiguration {
 
