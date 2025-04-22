@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-public interface sToursService {
+public interface ToursService {
 
     User createUser(String username, String password, String fullName, String email, Date birthdate, String phoneNumber) throws ToursException;
     DriverUser createDriverUser(String username, String password, String fullName, String email, Date birthdate, String phoneNumber, String expedient) throws ToursException;

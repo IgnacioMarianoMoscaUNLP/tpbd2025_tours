@@ -28,7 +28,9 @@ public class DriverUser extends User {
     public DriverUser() {
 
     }
-
+    public void addRoute(Route route) {
+        this.routes.add(route);
+    }
     public String getExpedient() {
         return expedient;
     }

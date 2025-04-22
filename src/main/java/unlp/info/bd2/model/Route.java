@@ -112,6 +112,8 @@ public class Route {
         return driverList;
     }
 
+    public void addDriver(DriverUser driverUser) {this.driverList.add(driverUser);}
+
     public void setDriverList(List<DriverUser> driverList) {
         this.driverList = driverList;
     }
@@ -119,6 +121,8 @@ public class Route {
     public List<TourGuideUser> getTourGuideList() {
         return tourGuideList;
     }
+
+    public void addTourGuide(TourGuideUser tourGuideUser) {this.tourGuideList.add(tourGuideUser);}
 
     public void setTourGuideList(List<TourGuideUser> tourGuideList) {
         this.tourGuideList = tourGuideList;

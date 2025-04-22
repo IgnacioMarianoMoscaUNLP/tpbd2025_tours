@@ -42,6 +42,8 @@ public class TourGuideUser extends User {
         return routes;
     }
 
+    public void addRoute(Route route) {this.routes.add(route);}
+
     public void setRoutes(List<Route> routes) {
         this.routes = routes;
     }

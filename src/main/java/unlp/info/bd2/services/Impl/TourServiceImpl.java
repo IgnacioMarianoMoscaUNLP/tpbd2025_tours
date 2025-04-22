@@ -68,12 +68,12 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public User updateUser(User user) throws ToursException {
-        return this.userRepository.upd;
+        return this.userRepository.save(user);
     }
 
     @Override
     public void deleteUser(User user) throws ToursException {
-
+        this.userRepository.delete(user);
     }
 
     @Override
@@ -105,12 +105,22 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public void assignDriverByUsername(String username, Long idRoute) throws ToursException {
-
+        Route route = this.routeRepository.findById(idRoute).orElse(null);
+        DriverUser driverUser = this.driverUserRepository.findDriverByUsername(username).orElse(null);
+        route.addDriver(driverUser);
+        driverUser.addRoute(route);
+        this.driverUserRepository.save(driverUser);
+        this.routeRepository.save(route);
     }
 
     @Override
     public void assignTourGuideByUsername(String username, Long idRoute) throws ToursException {
-
+        Route route = this.routeRepository.findById(idRoute).orElse(null);
+        TourGuideUser tourGuideUser = tourGuideUserRepository.findByUsername(username).orElse(null);
+        route.addTourGuide(tourGuideUser);
+        tourGuideUser.addRoute(route);
+        this.tourGuideUserRepository.save(tourGuideUser);
+        this.routeRepository.save(route);
     }
 
     @Override
