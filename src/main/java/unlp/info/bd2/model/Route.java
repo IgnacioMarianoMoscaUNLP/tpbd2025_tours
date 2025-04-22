@@ -1,25 +1,64 @@
 package unlp.info.bd2.model;
 
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name = "routes")
 public class Route {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, unique = true)
     private String name;
 
+    @Column(nullable = false)
     private float price;
 
+    @Column(nullable = false)
     private float totalKm;
-
+    @Column(nullable = false)
     private int maxNumberUsers;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "route_stop", joinColumns = @JoinColumn(name = "route_id"), inverseJoinColumns = @JoinColumn(name = "stop_id"))
     private List<Stop> stops;
 
+    @ManyToMany
+    @JoinTable(
+            name = "driver_route",
+            joinColumns = @JoinColumn(name = "route_id"),
+            inverseJoinColumns = @JoinColumn(name = "driverUser_id")
+    )
     private List<DriverUser> driverList;
 
+    @ManyToMany
+    @JoinTable(
+            name = "tour_guide_route",
+            joinColumns = @JoinColumn(name = "route_id"),
+            inverseJoinColumns = @JoinColumn(name = "tourGuideUser_id")
+    )
     private List<TourGuideUser> tourGuideList;
+
+    public Route() {
+        this.stops = new ArrayList<>();
+        this.driverList = new ArrayList<>();
+        this.tourGuideList = new ArrayList<>();
+    }
+
+    public Route(String name, float price, float totalKm, int maxNumberUsers, List<Stop> stops) {
+        this.name = name;
+        this.price = price;
+        this.totalKm = totalKm;
+        this.maxNumberUsers = maxNumberUsers;
+        this.stops = stops;
+        this.driverList = new ArrayList<>();
+        this.tourGuideList = new ArrayList<>();
+    }
 
     public Long getId() {
         return id;
