@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @org.springframework.stereotype.Service
 @Transactional
-public class TourServiceImpl implements ToursService {
+public class ToursServiceImpl implements ToursService {
     @Autowired
     private DriverUserRepository driverUserRepository;
     @Autowired
@@ -223,18 +223,17 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public List<Route> getTop3RoutesWithMoreStops() {
-        List<Route> topRoutes = routeRepository.findTop3RoutesByStopCount(PageRequest.of(0,3));
-        return topRoutes;
+        return this.routeRepository.findTop3RoutesByStopCount(PageRequest.of(0,3));
     }
 
     @Override
     public Long getCountOfPurchasesBetweenDates(Date start, Date end) {
-        return routeRepository.findByStopsBetweenDates(start, end);
+        return purchaseRepository.countByDateBetween(start, end);
     }
 
     @Override
     public List<Route> getRoutesWithStop(Stop stop) {
-        return this.routeRepository.findByStop(stop);
+        return this.routeRepository.findByStopsContaining(stop);
     }
 
     @Override
@@ -259,12 +258,12 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public List<Route> getTop3RoutesWithMaxAverageRating() {
-        return List.of();
+        return this.routeRepository.findTop3RoutesByMaxRating(PageRequest.of(0,3));
     }
 
     @Override
     public List<Route> getRoutesWithMinRating() {
-        return List.of();
+        return this.routeRepository.findRoutesByRatingEqualsOne();
     }
 
     @Override
@@ -284,7 +283,7 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public List<TourGuideUser> getTourGuidesWithRating1() {
-        return List.of();
+        return this.tourGuideUserRepository.findTourGuideUsersByRatingEqualsOne();
     }
 
     @Override

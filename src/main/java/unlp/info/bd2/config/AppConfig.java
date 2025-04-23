@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import unlp.info.bd2.services.*;
+import unlp.info.bd2.services.Impl.ToursServiceImpl;
 
 @Configuration
 public class AppConfig {
