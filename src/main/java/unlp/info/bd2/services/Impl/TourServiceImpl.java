@@ -1,6 +1,7 @@
 package unlp.info.bd2.services.Impl;
 
 import jakarta.transaction.*;
+import org.springframework.data.domain.PageRequest;
 import unlp.info.bd2.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import unlp.info.bd2.model.*;
@@ -177,7 +178,7 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public void deletePurchase(Purchase purchase) throws ToursException {
-
+        this.purchaseRepository.delete(purchase);
     }
 
     @Override
@@ -222,17 +223,18 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public List<Route> getTop3RoutesWithMoreStops() {
-        return List.of();
+        List<Route> topRoutes = routeRepository.findTop3RoutesByStopCount(PageRequest.of(0,3));
+        return topRoutes;
     }
 
     @Override
     public Long getCountOfPurchasesBetweenDates(Date start, Date end) {
-        return 0L;
+        return routeRepository.findByStopsBetweenDates(start, end);
     }
 
     @Override
     public List<Route> getRoutesWithStop(Stop stop) {
-        return List.of();
+        return this.routeRepository.findByStop(stop);
     }
 
     @Override
@@ -242,7 +244,7 @@ public class TourServiceImpl implements ToursService {
 
     @Override
     public Long getMaxStopOfRoutes() {
-        return 0L;
+        return this.routeRepository.findByMaxStopsCount();
     }
 
     @Override
