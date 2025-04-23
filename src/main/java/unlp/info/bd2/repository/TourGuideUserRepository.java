@@ -10,6 +10,6 @@ import java.util.Optional;
 public interface TourGuideUserRepository extends CrudRepository<TourGuideUser,Long> {
     Optional<TourGuideUser> findByUsername(String username);
 
-    @Query("select t from TourGuideUser t left join Route r   join Purchase p on r.id = p.route.id where p.review.rating =1 group by t.id")
+    @Query("select t from TourGuideUser t inner join Route r   join Purchase p on r.id = p.route.id where p.review.rating =1 group by t")
     List<TourGuideUser> findTourGuideUsersByRatingEqualsOne();
 }

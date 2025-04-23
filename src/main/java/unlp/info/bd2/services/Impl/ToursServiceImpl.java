@@ -260,7 +260,9 @@ public class ToursServiceImpl implements ToursService {
 
     @Override
     public List<Route> getTop3RoutesWithMaxAverageRating() {
-        return this.routeRepository.findTop3RoutesByMaxRating(PageRequest.of(0,3));
+        List<Route>w =  this.routeRepository.findTop3RoutesByAverageRating(PageRequest.of(0,3));
+        System.out.println(w.size());
+        return w ;
     }
 
     @Override
