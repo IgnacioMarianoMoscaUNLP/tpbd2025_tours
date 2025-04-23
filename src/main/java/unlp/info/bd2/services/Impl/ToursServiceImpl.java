@@ -106,22 +106,24 @@ public class ToursServiceImpl implements ToursService {
 
     @Override
     public void assignDriverByUsername(String username, Long idRoute) throws ToursException {
-        Route route = this.routeRepository.findById(idRoute).orElse(null);
-        DriverUser driverUser = this.driverUserRepository.findDriverByUsername(username).orElse(null);
-        route.addDriver(driverUser);
-        driverUser.addRoute(route);
-        this.driverUserRepository.save(driverUser);
-        this.routeRepository.save(route);
+        Optional<Route> route = this.routeRepository.findById(idRoute);
+        Optional<DriverUser> driverUser = this.driverUserRepository.findDriverByUsername(username);
+        if(route.isEmpty() || driverUser.isEmpty())throw new ToursException("No pudo realizarse la asignación");
+        route.get().addDriver(driverUser.get());
+        driverUser.get().addRoute(route.get());
+        this.driverUserRepository.save(driverUser.get());
+        this.routeRepository.save(route.get());
     }
 
     @Override
     public void assignTourGuideByUsername(String username, Long idRoute) throws ToursException {
-        Route route = this.routeRepository.findById(idRoute).orElse(null);
-        TourGuideUser tourGuideUser = tourGuideUserRepository.findByUsername(username).orElse(null);
-        route.addTourGuide(tourGuideUser);
-        tourGuideUser.addRoute(route);
-        this.tourGuideUserRepository.save(tourGuideUser);
-        this.routeRepository.save(route);
+        Optional<Route> route = this.routeRepository.findById(idRoute);
+        Optional<TourGuideUser> tourGuideUser = tourGuideUserRepository.findByUsername(username);
+        if(tourGuideUser.isEmpty() || route.isEmpty())throw new ToursException ("No pudo realizarse la asignación");
+        route.get().addTourGuide(tourGuideUser.get());
+        tourGuideUser.get().addRoute(route.get());
+        this.tourGuideUserRepository.save(tourGuideUser.get());
+        this.routeRepository.save(route.get());
     }
 
     @Override
@@ -288,6 +290,6 @@ public class ToursServiceImpl implements ToursService {
 
     @Override
     public DriverUser getDriverUserWithMoreRoutes() {
-        return null;
+        return this.driverUserRepository.findDriverUserByMaxRoutes();
     }
 }

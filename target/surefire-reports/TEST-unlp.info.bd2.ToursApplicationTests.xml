@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="unlp.info.bd2.ToursApplicationTests" time="6.038" tests="10" errors="3" skipped="0" failures="5">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="H:\BasesDatos2-Dos\tp2\tpbd2025_tours\target\test-classes;H:\BasesDatos2-Dos\tp2\tpbd2025_tours\target\classes;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\Mariano\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Mariano\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Mariano\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Mariano\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Mariano\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\Mariano\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Mariano\.m2\repository\org\springframework\data\spring-data-jpa\3.2.3\spring-data-jpa-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-orm\6.1.4\spring-orm-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-jdbc\6.1.4\spring-jdbc-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\Mariano\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\Mariano\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Mariano\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-tx\6.0.12\spring-tx-6.0.12.jar;C:\Users\Mariano\.m2\repository\org\hibernate\orm\hibernate-core\6.4.3.Final\hibernate-core-6.4.3.Final.jar;C:\Users\Mariano\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Mariano\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Mariano\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Mariano\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Mariano\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Mariano\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Mariano\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Mariano\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\Mariano\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\Mariano\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\Mariano\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\Mariano\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\Mariano\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\Mariano\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Mariano\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Mariano\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\Mariano\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Mariano\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\Mariano\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\Mariano\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\Mariano\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Mariano\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\Mariano\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Mariano\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Mariano\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Mariano\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Mariano\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Mariano\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Mariano\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Mariano\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Mariano\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Mariano\.m2\repository\commons-dbcp\commons-dbcp\1.4\commons-dbcp-1.4.jar;C:\Users\Mariano\.m2\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;C:\Users\Mariano\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Mariano\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Buenos_Aires"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AR"/>
+    <property name="sun.boot.library.path" value="C:\Users\Mariano\.jdks\openjdk-24\bin"/>
+    <property name="sun.java.command" value="C:\Users\Mariano\AppData\Local\Temp\surefire18019196676328937292\surefirebooter-20250423120303003_3.jar C:\Users\Mariano\AppData\Local\Temp\surefire18019196676328937292 2025-04-23T12-03-02_916-jvmRun1 surefire-20250423120303003_1tmp surefire_0-20250423120303003_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="H:\BasesDatos2-Dos\tp2\tpbd2025_tours\target\test-classes;H:\BasesDatos2-Dos\tp2\tpbd2025_tours\target\classes;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.3\spring-boot-starter-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot\3.2.3\spring-boot-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.3\spring-boot-autoconfigure-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.3\spring-boot-starter-logging-3.2.3.jar;C:\Users\Mariano\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Mariano\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\Mariano\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\Mariano\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\Mariano\.m2\repository\org\slf4j\jul-to-slf4j\2.0.12\jul-to-slf4j-2.0.12.jar;C:\Users\Mariano\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-core\6.1.4\spring-core-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-jcl\6.1.4\spring-jcl-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Mariano\.m2\repository\org\springframework\data\spring-data-jpa\3.2.3\spring-data-jpa-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\data\spring-data-commons\3.2.3\spring-data-commons-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-orm\6.1.4\spring-orm-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-jdbc\6.1.4\spring-jdbc-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-context\6.1.4\spring-context-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-expression\6.1.4\spring-expression-6.1.4.jar;C:\Users\Mariano\.m2\repository\io\micrometer\micrometer-observation\1.12.3\micrometer-observation-1.12.3.jar;C:\Users\Mariano\.m2\repository\io\micrometer\micrometer-commons\1.12.3\micrometer-commons-1.12.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-aop\6.1.4\spring-aop-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-beans\6.1.4\spring-beans-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Mariano\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-tx\6.0.12\spring-tx-6.0.12.jar;C:\Users\Mariano\.m2\repository\org\hibernate\orm\hibernate-core\6.4.3.Final\hibernate-core-6.4.3.Final.jar;C:\Users\Mariano\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Mariano\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Mariano\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Mariano\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Mariano\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Mariano\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\Mariano\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Mariano\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.1\jakarta.xml.bind-api-4.0.1.jar;C:\Users\Mariano\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.2\jakarta.activation-api-2.1.2.jar;C:\Users\Mariano\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.4\jaxb-runtime-4.0.4.jar;C:\Users\Mariano\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.4\jaxb-core-4.0.4.jar;C:\Users\Mariano\.m2\repository\org\eclipse\angus\angus-activation\2.0.1\angus-activation-2.0.1.jar;C:\Users\Mariano\.m2\repository\org\glassfish\jaxb\txw2\4.0.4\txw2-4.0.4.jar;C:\Users\Mariano\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Mariano\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Mariano\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.2.3\spring-boot-starter-test-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-test\3.2.3\spring-boot-test-3.2.3.jar;C:\Users\Mariano\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.2.3\spring-boot-test-autoconfigure-3.2.3.jar;C:\Users\Mariano\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Mariano\.m2\repository\net\minidev\json-smart\2.5.0\json-smart-2.5.0.jar;C:\Users\Mariano\.m2\repository\net\minidev\accessors-smart\2.5.0\accessors-smart-2.5.0.jar;C:\Users\Mariano\.m2\repository\org\ow2\asm\asm\9.3\asm-9.3.jar;C:\Users\Mariano\.m2\repository\org\assertj\assertj-core\3.24.2\assertj-core-3.24.2.jar;C:\Users\Mariano\.m2\repository\org\awaitility\awaitility\4.2.0\awaitility-4.2.0.jar;C:\Users\Mariano\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Mariano\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Mariano\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Mariano\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Mariano\.m2\repository\org\mockito\mockito-core\5.7.0\mockito-core-5.7.0.jar;C:\Users\Mariano\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Mariano\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Mariano\.m2\repository\org\mockito\mockito-junit-jupiter\5.7.0\mockito-junit-jupiter-5.7.0.jar;C:\Users\Mariano\.m2\repository\org\skyscreamer\jsonassert\1.5.1\jsonassert-1.5.1.jar;C:\Users\Mariano\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Mariano\.m2\repository\org\springframework\spring-test\6.1.4\spring-test-6.1.4.jar;C:\Users\Mariano\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Mariano\.m2\repository\commons-dbcp\commons-dbcp\1.4\commons-dbcp-1.4.jar;C:\Users\Mariano\.m2\repository\commons-pool\commons-pool\1.6\commons-pool-1.6.jar;C:\Users\Mariano\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Mariano\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Mariano"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-03-18"/>
+    <property name="java.home" value="C:\Users\Mariano\.jdks\openjdk-24"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="H:\BasesDatos2-Dos\tp2\tpbd2025_tours"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Mariano\AppData\Local\Temp\surefire18019196676328937292\surefirebooter-20250423120303003_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="24+36-3646"/>
+    <property name="user.name" value="Mariano"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Mariano\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Mariano\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.5"/>
+    <property name="java.version" value="24"/>
+    <property name="user.dir" value="H:\BasesDatos2-Dos\tp2\tpbd2025_tours"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Mariano\.jdks\openjdk-24\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\Mariano\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Mariano\AppData\Local\Programs\Python\Python39\;C:\Users\Mariano\AppData\Local\Microsoft\WindowsApps;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\Mariano\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="24+36-3646"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="addReviewToPurchaseTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.358">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at unlp.info.bd2.ToursApplicationTests.addReviewToPurchaseTest(ToursApplicationTests.java:291)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+    <system-out><![CDATA[12:03:03.896 [main] INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:03:03.967 [main] INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate -- Finished Spring Data repository scanning in 62 ms. Found 10 JPA repository interfaces.
+12:03:04.218 [main] INFO org.hibernate.jpa.internal.util.LogHelper -- HHH000204: Processing PersistenceUnitInfo [name: default]
+12:03:04.264 [main] INFO org.hibernate.Version -- HHH000412: Hibernate ORM core version 6.4.3.Final
+12:03:04.295 [main] INFO org.hibernate.cache.internal.RegionFactoryInitiator -- HHH000026: Second-level cache disabled
+12:03:04.578 [main] INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo -- No LoadTimeWeaver setup: ignoring JPA class transformer
+12:03:04.764 [main] WARN org.hibernate.orm.deprecation -- HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+12:03:04.992 [main] INFO org.hibernate.id.enhanced.TableGenerator -- HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+12:03:05.626 [main] INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator -- HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    alter table driver_route 
+       drop 
+       foreign key FKg8jyfsopd400qnv7bpddxwhop
+Hibernate: 
+    alter table driver_route 
+       drop 
+       foreign key FK8l7i971uyrmcw0k6m5lrl96an
+Hibernate: 
+    alter table item_service 
+       drop 
+       foreign key FK9a7uryuut9eisb7v77kefhb77
+Hibernate: 
+    alter table item_service 
+       drop 
+       foreign key FKakm8rd8t4n8nfnp2udw13hndy
+Hibernate: 
+    alter table purchases 
+       drop 
+       foreign key FKb8a9x319ptkwr9xnu3imfwxkt
+Hibernate: 
+    alter table reviews 
+       drop 
+       foreign key FKtlbpgfgpje3g0do3xdmry3y9j
+Hibernate: 
+    alter table route_stop 
+       drop 
+       foreign key FKdhlwk9t89bsdrleqsk6a1edns
+Hibernate: 
+    alter table route_stop 
+       drop 
+       foreign key FK3cst5douuk36g3nxx7uad442
+Hibernate: 
+    alter table services 
+       drop 
+       foreign key FK16cnuanf4fntklkbbckymn8ky
+Hibernate: 
+    alter table tour_guide_route 
+       drop 
+       foreign key FKrb41fjxw2o8gcg7hpp9e2fbrx
+Hibernate: 
+    alter table tour_guide_route 
+       drop 
+       foreign key FK7y1fd5kp21h4s2chtrgdk4ywb
+Hibernate: 
+    drop table if exists driver_route
+Hibernate: 
+    drop table if exists DriverUser
+Hibernate: 
+    drop table if exists hibernate_sequences
+Hibernate: 
+    drop table if exists item_service
+Hibernate: 
+    drop table if exists purchases
+Hibernate: 
+    drop table if exists reviews
+Hibernate: 
+    drop table if exists route_stop
+Hibernate: 
+    drop table if exists routes
+Hibernate: 
+    drop table if exists services
+Hibernate: 
+    drop table if exists Stop
+Hibernate: 
+    drop table if exists suppliers
+Hibernate: 
+    drop table if exists suppliers_SEQ
+Hibernate: 
+    drop table if exists tour_guide_route
+Hibernate: 
+    drop table if exists TourGuideUser
+Hibernate: 
+    drop table if exists users
+Hibernate: 
+    create table driver_route (
+        driverUser_id bigint not null,
+        route_id bigint not null
+    ) engine=InnoDB
+Hibernate: 
+    create table DriverUser (
+        active bit not null,
+        birthdate datetime(6),
+        id bigint not null,
+        email varchar(255) not null,
+        expedient varchar(255),
+        name varchar(255) not null,
+        password varchar(255) not null,
+        phoneNumber varchar(255),
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table hibernate_sequences (
+        next_val bigint,
+        sequence_name varchar(255) not null,
+        primary key (sequence_name)
+    ) engine=InnoDB
+Hibernate: 
+    insert into hibernate_sequences(sequence_name, next_val) values ('default',0)
+Hibernate: 
+    create table item_service (
+        quantity integer not null,
+        id bigint not null auto_increment,
+        purchase_id bigint not null,
+        service_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table purchases (
+        totalPrice float(23) not null,
+        date datetime(6) not null,
+        id bigint not null auto_increment,
+        route_id bigint not null,
+        user_id bigint not null,
+        code varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table reviews (
+        rating integer not null,
+        id bigint not null auto_increment,
+        purchase_id bigint,
+        comment varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table route_stop (
+        route_id bigint not null,
+        stop_id bigint not null
+    ) engine=InnoDB
+Hibernate: 
+    create table routes (
+        maxNumberUsers integer not null,
+        price float(23) not null,
+        totalKm float(23) not null,
+        id bigint not null auto_increment,
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table services (
+        price float(23) not null,
+        id bigint not null auto_increment,
+        supplier_id bigint not null,
+        description varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table Stop (
+        id bigint not null auto_increment,
+        description varchar(255),
+        name varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table suppliers (
+        id bigint not null,
+        authorizationNumber varchar(255) not null,
+        businessName varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table suppliers_SEQ (
+        next_val bigint
+    ) engine=InnoDB
+Hibernate: 
+    insert into suppliers_SEQ values ( 1 )
+Hibernate: 
+    create table tour_guide_route (
+        route_id bigint not null,
+        tourGuideUser_id bigint not null
+    ) engine=InnoDB
+Hibernate: 
+    create table TourGuideUser (
+        active bit not null,
+        birthdate datetime(6),
+        id bigint not null,
+        education varchar(255),
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        phoneNumber varchar(255),
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    create table users (
+        active bit not null,
+        birthdate datetime(6),
+        id bigint not null,
+        email varchar(255) not null,
+        name varchar(255) not null,
+        password varchar(255) not null,
+        phoneNumber varchar(255),
+        username varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate: 
+    alter table DriverUser 
+       add constraint UK_1pt6kirpv9ark7eblnmetdghh unique (email)
+Hibernate: 
+    alter table DriverUser 
+       add constraint UK_kolrq8nj3uot4al9pp5lgaomg unique (username)
+Hibernate: 
+    alter table purchases 
+       add constraint UK_idp67y8emgudwcvj94r8chpf4 unique (code)
+Hibernate: 
+    alter table reviews 
+       add constraint UK_jfd0ugmaq72ipi087g9f158hs unique (purchase_id)
+Hibernate: 
+    alter table routes 
+       add constraint UK_gclhuhdkauatimjoqj7kc210i unique (name)
+Hibernate: 
+    alter table Stop 
+       add constraint UK_4j1nncn613dd59990nsndk035 unique (name)
+Hibernate: 
+    alter table suppliers 
+       add constraint UK_b699v3k8236wnaxjc86510b8q unique (authorizationNumber)
+Hibernate: 
+    alter table suppliers 
+       add constraint UK_dh3kd2uartlxrmg8u4ugrks7w unique (businessName)
+Hibernate: 
+    alter table TourGuideUser 
+       add constraint UK_ewctmh4994b2fjsxnwrcqq5et unique (email)
+Hibernate: 
+    alter table TourGuideUser 
+       add constraint UK_bwjn16v0tyr4jkfsxl3wgpkx4 unique (username)
+Hibernate: 
+    alter table users 
+       add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: 
+    alter table users 
+       add constraint UK_r43af9ap4edm43mmtq01oddj6 unique (username)
+Hibernate: 
+    alter table driver_route 
+       add constraint FKg8jyfsopd400qnv7bpddxwhop 
+       foreign key (driverUser_id) 
+       references DriverUser (id)
+Hibernate: 
+    alter table driver_route 
+       add constraint FK8l7i971uyrmcw0k6m5lrl96an 
+       foreign key (route_id) 
+       references routes (id)
+Hibernate: 
+    alter table item_service 
+       add constraint FK9a7uryuut9eisb7v77kefhb77 
+       foreign key (purchase_id) 
+       references purchases (id)
+Hibernate: 
+    alter table item_service 
+       add constraint FKakm8rd8t4n8nfnp2udw13hndy 
+       foreign key (service_id) 
+       references services (id)
+Hibernate: 
+    alter table purchases 
+       add constraint FKb8a9x319ptkwr9xnu3imfwxkt 
+       foreign key (route_id) 
+       references routes (id)
+Hibernate: 
+    alter table reviews 
+       add constraint FKtlbpgfgpje3g0do3xdmry3y9j 
+       foreign key (purchase_id) 
+       references purchases (id)
+Hibernate: 
+    alter table route_stop 
+       add constraint FKdhlwk9t89bsdrleqsk6a1edns 
+       foreign key (stop_id) 
+       references Stop (id)
+Hibernate: 
+    alter table route_stop 
+       add constraint FK3cst5douuk36g3nxx7uad442 
+       foreign key (route_id) 
+       references routes (id)
+Hibernate: 
+    alter table services 
+       add constraint FK16cnuanf4fntklkbbckymn8ky 
+       foreign key (supplier_id) 
+       references suppliers (id)
+Hibernate: 
+    alter table tour_guide_route 
+       add constraint FKrb41fjxw2o8gcg7hpp9e2fbrx 
+       foreign key (tourGuideUser_id) 
+       references TourGuideUser (id)
+Hibernate: 
+    alter table tour_guide_route 
+       add constraint FK7y1fd5kp21h4s2chtrgdk4ywb 
+       foreign key (route_id) 
+       references routes (id)
+12:03:08.205 [main] INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:03:08.482 [main] INFO org.springframework.data.jpa.repository.query.QueryEnhancerFactory -- Hibernate is in classpath; If applicable, HQL parser will be used.
+Hibernate: 
+    select
+        tbl.next_val 
+    from
+        hibernate_sequences tbl 
+    where
+        tbl.sequence_name=? for update
+Hibernate: 
+    update
+        hibernate_sequences 
+    set
+        next_val=?  
+    where
+        next_val=? 
+        and sequence_name=?
+Hibernate: 
+    insert 
+    into
+        users
+        (active, birthdate, email, name, password, phoneNumber, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        purchases
+        (code, date, route_id, totalPrice, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+]]></system-out>
+    <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Mariano\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="createAndGetUserTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.028">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at unlp.info.bd2.ToursApplicationTests.createAndGetUserTest(ToursApplicationTests.java:78)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        tbl.next_val 
+    from
+        hibernate_sequences tbl 
+    where
+        tbl.sequence_name=? for update
+Hibernate: 
+    update
+        hibernate_sequences 
+    set
+        next_val=?  
+    where
+        next_val=? 
+        and sequence_name=?
+]]></system-out>
+  </testcase>
+  <testcase name="assignWorkersToRoutesTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.127">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        DriverUser
+        (active, birthdate, email, name, password, phoneNumber, username, expedient, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        DriverUser
+        (active, birthdate, email, name, password, phoneNumber, username, expedient, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        TourGuideUser
+        (active, birthdate, email, name, password, phoneNumber, username, education, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        route_stop
+        (route_id, stop_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        route_stop
+        (route_id, stop_id) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        route_stop
+        (route_id, stop_id) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        du1_0.id,
+        du1_0.active,
+        du1_0.birthdate,
+        du1_0.email,
+        du1_0.name,
+        du1_0.password,
+        du1_0.phoneNumber,
+        du1_0.username,
+        du1_0.expedient 
+    from
+        DriverUser du1_0 
+    where
+        du1_0.username=?
+Hibernate: 
+    select
+        du1_0.id,
+        du1_0.active,
+        du1_0.birthdate,
+        du1_0.email,
+        du1_0.name,
+        du1_0.password,
+        du1_0.phoneNumber,
+        du1_0.username,
+        du1_0.expedient 
+    from
+        DriverUser du1_0 
+    where
+        du1_0.username=?
+Hibernate: 
+    select
+        tgu1_0.id,
+        tgu1_0.active,
+        tgu1_0.birthdate,
+        tgu1_0.email,
+        tgu1_0.name,
+        tgu1_0.password,
+        tgu1_0.phoneNumber,
+        tgu1_0.username,
+        tgu1_0.education 
+    from
+        TourGuideUser tgu1_0 
+    where
+        tgu1_0.username=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.maxNumberUsers,
+        r1_0.name,
+        r1_0.price,
+        r1_0.totalKm 
+    from
+        routes r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        tgu1_0.id,
+        tgu1_0.active,
+        tgu1_0.birthdate,
+        tgu1_0.email,
+        tgu1_0.name,
+        tgu1_0.password,
+        tgu1_0.phoneNumber,
+        tgu1_0.username,
+        tgu1_0.education 
+    from
+        TourGuideUser tgu1_0 
+    where
+        tgu1_0.username=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.maxNumberUsers,
+        r1_0.name,
+        r1_0.price,
+        r1_0.totalKm 
+    from
+        routes r1_0 
+    where
+        r1_0.id=?
+Hibernate: 
+    select
+        du1_0.id,
+        du1_0.active,
+        du1_0.birthdate,
+        du1_0.email,
+        du1_0.name,
+        du1_0.password,
+        du1_0.phoneNumber,
+        du1_0.username,
+        du1_0.expedient 
+    from
+        DriverUser du1_0 
+    where
+        du1_0.username=?
+]]></system-out>
+  </testcase>
+  <testcase name="createAndGetPurchaseTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.018">
+    <failure message="expected: &lt;1&gt; but was: &lt;0&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:145)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:531)
+	at unlp.info.bd2.ToursApplicationTests.createAndGetPurchaseTest(ToursApplicationTests.java:236)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        users
+        (active, birthdate, email, name, password, phoneNumber, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        purchases
+        (code, date, route_id, totalPrice, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="removePurchaseAndItems" classname="unlp.info.bd2.ToursApplicationTests" time="0.02">
+    <error message="Cannot invoke &quot;unlp.info.bd2.model.Service.getItemServiceList()&quot; because &quot;service1&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "unlp.info.bd2.model.Service.getItemServiceList()" because "service1" is null
+	at unlp.info.bd2.ToursApplicationTests.removePurchaseAndItems(ToursApplicationTests.java:272)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        users
+        (active, birthdate, email, name, password, phoneNumber, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        purchases
+        (code, date, route_id, totalPrice, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="createAndGetRoutesAndStopsTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.033">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.description,
+        s1_0.name 
+    from
+        Stop s1_0 
+    where
+        s1_0.name like ? escape '\\'
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.description,
+        s1_0.name 
+    from
+        Stop s1_0 
+    where
+        s1_0.name like ? escape '\\'
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.description,
+        s1_0.name 
+    from
+        Stop s1_0 
+    where
+        s1_0.name like ? escape '\\'
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.maxNumberUsers,
+        r1_0.name,
+        r1_0.price,
+        r1_0.totalKm 
+    from
+        routes r1_0 
+    where
+        r1_0.price<?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.maxNumberUsers,
+        r1_0.name,
+        r1_0.price,
+        r1_0.totalKm 
+    from
+        routes r1_0 
+    where
+        r1_0.price<?
+]]></system-out>
+  </testcase>
+  <testcase name="createAndGetSupplierAndService" classname="unlp.info.bd2.ToursApplicationTests" time="0.005">
+    <error message="Cannot invoke &quot;unlp.info.bd2.model.Supplier.getId()&quot; because &quot;supplier1&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "unlp.info.bd2.model.Supplier.getId()" because "supplier1" is null
+	at unlp.info.bd2.ToursApplicationTests.createAndGetSupplierAndService(ToursApplicationTests.java:177)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+  <testcase name="updateUserTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.008">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at unlp.info.bd2.ToursApplicationTests.updateUserTest(ToursApplicationTests.java:110)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+  </testcase>
+  <testcase name="deleteUserTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.021">
+    <failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at unlp.info.bd2.ToursApplicationTests.deleteUserTest(ToursApplicationTests.java:316)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        users
+        (active, birthdate, email, name, password, phoneNumber, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        users
+        (active, birthdate, email, name, password, phoneNumber, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        Stop
+        (description, name) 
+    values
+        (?, ?)
+Hibernate: 
+    insert 
+    into
+        routes
+        (maxNumberUsers, name, price, totalKm) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        purchases
+        (code, date, route_id, totalPrice, user_id) 
+    values
+        (?, ?, ?, ?, ?)
+]]></system-out>
+  </testcase>
+  <testcase name="updateServicePriceTest" classname="unlp.info.bd2.ToursApplicationTests" time="0.006">
+    <error message="Cannot invoke &quot;unlp.info.bd2.model.Service.getPrice()&quot; because &quot;service1&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "unlp.info.bd2.model.Service.getPrice()" because "service1" is null
+	at unlp.info.bd2.ToursApplicationTests.updateServicePriceTest(ToursApplicationTests.java:212)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></error>
+  </testcase>
+</testsuite>
